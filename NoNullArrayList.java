@@ -1,6 +1,12 @@
 import java.util.ArrayList;
 public class NoNullArrayList<T> extends ArrayList<T> {
   public NoNullArrayList(){
+    super();
   }
-  public boolean add()
+  public NoNullArrayList(int startingCapacity){
+    super(startingCapacity);
+  }
+  public boolean add(){
+
+  }
 }
