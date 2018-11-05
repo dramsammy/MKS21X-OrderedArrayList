@@ -10,15 +10,14 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     if (element == null){
       throw new IllegalArgumentException();
     }
+    int count = 0;
     for (int i = 0; i < this.size(); i++){
       if ((element.compareTo(this.get(i))) > 0){
-        super.add(i, element);
+        count = i + 1;
       }
-      else {
-        super.add(i-1,element);
     }
-  }
-    return super.add(element);
+    super.add(count, element);
+    return true;
   }
   public void add(int index, T element){
     add(element);
